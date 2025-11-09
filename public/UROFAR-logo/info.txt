@@ -10,5 +10,9 @@ font author site: http://files.korkork.com/
 icon designer: Patrick Morrison
 icon designer link: /creator/bluevurt/
         
-{"bg":"transparent","icon-gradient-0":"#007DE8","icon-gradient-1":"#A1C3DB","font":"#000000","slogan":"#141414"}
+
+fontColor: {"gradient-0":"#1e40af","gradient-1":"#3b82f6"}
+bgColor: {"hex":"transparent"}
+iconColor: {"gradient-0":"#1e40af","gradient-1":"#3b82f6"}
+
       
