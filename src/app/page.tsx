@@ -7,7 +7,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <StatsSection />
       <ServicesGrid />
       <CallToAction />
     </>
