@@ -105,7 +105,7 @@ export default function ServicesGrid() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: 'repeat(12, 1fr)' },
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(12, 1fr)' },
             gap: { xs: 2, sm: 2.5, md: 3 },
             mb: { xs: 4, sm: 5, md: 6 },
           }}
@@ -114,51 +114,55 @@ export default function ServicesGrid() {
             const Icon = iconMap[service.icon];
             const imageSrc = imageMap[service.id] || 'data-recovery.jpg';
             
-            // Bento grid layout: first card is large (spans 8 cols), others span 4 cols
+            // Bento grid layout: first card is large (spans 8 cols on desktop, 2 cols on tablet), others span 4 cols on desktop, 1 col on tablet
             const gridColumn = index === 0 
-              ? { xs: 'span 1', md: 'span 8' }
-              : { xs: 'span 1', md: 'span 4' };
+              ? { xs: 'span 1', sm: 'span 2', md: 'span 8' }
+              : { xs: 'span 1', sm: 'span 1', md: 'span 4' };
             
             const isLarge = index === 0;
 
             return (
-              <motion.div
+              <Box
                 key={service.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                style={{ gridColumn: '1 / -1' }}
+                sx={{
+                  gridColumn: gridColumn,
+                }}
               >
-                <Box
-                  component={Link}
-                  href="/services"
-                  sx={{
-                    position: 'relative',
-                    gridColumn: gridColumn,
-                    height: isLarge ? { xs: 350, sm: 400, md: 450, lg: 500 } : { xs: 300, sm: 350, md: 400 },
-                    borderRadius: { xs: 2, sm: 2.5, md: 3 },
-                    overflow: 'hidden',
-                    display: 'block',
-                    textDecoration: 'none',
-                    boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                    '&:hover': {
-                      transform: 'translateY(-8px)',
-                      boxShadow: '0 20px 40px rgba(0,0,0,0.12)',
-                      '& .service-image': {
-                        transform: 'scale(1.1)',
-                      },
-                      '& .service-overlay': {
-                        background: 'linear-gradient(to top, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(30, 58, 138, 0.3) 100%)',
-                      },
-                      '& .learn-more': {
-                        opacity: 1,
-                        transform: 'translateX(0)',
-                      },
-                    },
-                  }}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  style={{ height: '100%' }}
                 >
+                  <Box
+                    component={Link}
+                    href="/services"
+                    sx={{
+                      position: 'relative',
+                      height: isLarge ? { xs: 350, sm: 450, md: 450, lg: 500 } : { xs: 300, sm: 350, md: 400 },
+                      borderRadius: { xs: 2, sm: 2.5, md: 3 },
+                      overflow: 'hidden',
+                      display: 'block',
+                      textDecoration: 'none',
+                      boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+                      transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+                      '&:hover': {
+                        transform: 'translateY(-8px)',
+                        boxShadow: '0 20px 40px rgba(0,0,0,0.12)',
+                        '& .service-image': {
+                          transform: 'scale(1.1)',
+                        },
+                        '& .service-overlay': {
+                          background: 'linear-gradient(to top, rgba(30, 58, 138, 0.95) 0%, rgba(30, 58, 138, 0.7) 50%, rgba(30, 58, 138, 0.3) 100%)',
+                        },
+                        '& .learn-more': {
+                          opacity: 1,
+                          transform: 'translateX(0)',
+                        },
+                      },
+                    }}
+                  >
                   {/* Background Image */}
                   <Box
                     className="service-image"
@@ -290,8 +294,9 @@ export default function ServicesGrid() {
                       <ArrowRight size={16} />
                     </Box>
                   </Box>
-                </Box>
-              </motion.div>
+                  </Box>
+                </motion.div>
+              </Box>
             );
           })}
         </Box>
