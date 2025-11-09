@@ -95,7 +95,7 @@ export default function HeroSection() {
         }}
       />
 
-      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
+      <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1, py: { xs: 4, sm: 6, md: 8 } }}>
         <Box sx={{ maxWidth: '800px' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -110,8 +110,8 @@ export default function HeroSection() {
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
                 fontWeight: 700,
-                fontSize: { xs: '2.5rem', sm: '3.5rem', md: '4rem' },
-                mb: 2,
+                fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3.5rem', lg: '4rem' },
+                mb: { xs: 1, sm: 1.5, md: 2 },
                 lineHeight: 1.2,
                 textShadow: '0 0 40px rgba(255,255,255,0.5)',
               }}
@@ -130,8 +130,8 @@ export default function HeroSection() {
               sx={{
                 color: 'rgba(255, 255, 255, 0.95)',
                 fontWeight: 600,
-                fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' },
-                mb: 3,
+                fontSize: { xs: '1.1rem', sm: '1.5rem', md: '2rem', lg: '2.5rem' },
+                mb: { xs: 1.5, sm: 2, md: 3 },
               }}
             >
               {COMPANY_INFO.tagline}
@@ -148,8 +148,8 @@ export default function HeroSection() {
               sx={{
                 color: 'rgba(255, 255, 255, 0.9)',
                 fontWeight: 400,
-                fontSize: { xs: '1rem', sm: '1.25rem' },
-                mb: 4,
+                fontSize: { xs: '0.85rem', sm: '1rem', md: '1.15rem', lg: '1.25rem' },
+                mb: { xs: 2, sm: 3, md: 4 },
                 lineHeight: 1.6,
               }}
             >
@@ -162,7 +162,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', gap: { xs: 1, sm: 1.5, md: 2 }, flexWrap: 'nowrap' }}>
               <motion.div
                 whileHover={{ scale: 1.05, rotateX: 5 }}
                 whileTap={{ scale: 0.95 }}
@@ -172,15 +172,16 @@ export default function HeroSection() {
                   href="/services"
                   variant="contained"
                   size="large"
-                  endIcon={<ArrowRight />}
+                  endIcon={<ArrowRight size={18} />}
                   sx={{
                     background: 'linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%)',
                     color: 'primary.main',
-                    px: 4,
-                    py: 1.5,
-                    fontSize: '1.1rem',
+                    px: { xs: 2, sm: 3, md: 4 },
+                    py: { xs: 1, sm: 1.25, md: 1.5 },
+                    fontSize: { xs: '0.85rem', sm: '1rem', md: '1.1rem' },
                     fontWeight: 600,
                     boxShadow: '0 4px 20px rgba(255,255,255,0.3)',
+                    whiteSpace: 'nowrap',
                     '&:hover': {
                       background: 'linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%)',
                       boxShadow: '0 10px 30px rgba(255,255,255,0.4)',
@@ -200,17 +201,18 @@ export default function HeroSection() {
                   href={`tel:${COMPANY_INFO.phone.primary.replace(/\./g, '-')}`}
                   variant="outlined"
                   size="large"
-                  startIcon={<Phone />}
+                  startIcon={<Phone size={18} />}
                   sx={{
                     borderColor: 'white',
                     borderWidth: 2,
                     color: 'white',
-                    px: 4,
-                    py: 1.5,
-                    fontSize: '1.1rem',
+                    px: { xs: 2, sm: 3, md: 4 },
+                    py: { xs: 1, sm: 1.25, md: 1.5 },
+                    fontSize: { xs: '0.85rem', sm: '1rem', md: '1.1rem' },
                     fontWeight: 600,
                     backdropFilter: 'blur(10px)',
                     bgcolor: 'rgba(255, 255, 255, 0.1)',
+                    whiteSpace: 'nowrap',
                     '&:hover': {
                       borderColor: 'white',
                       bgcolor: 'rgba(255, 255, 255, 0.2)',
@@ -233,10 +235,10 @@ export default function HeroSection() {
           >
             <Box
               sx={{
-                mt: 6,
+                mt: { xs: 3, sm: 4, md: 5, lg: 6 },
                 display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' },
-                gap: 2,
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: { xs: 1, sm: 1.5, md: 2 },
               }}
             >
               {[
@@ -259,8 +261,8 @@ export default function HeroSection() {
                         backdropFilter: 'blur(10px)',
                         bgcolor: 'rgba(255, 255, 255, 0.1)',
                         border: '1px solid rgba(255, 255, 255, 0.2)',
-                        borderRadius: 2,
-                        p: 2.5,
+                        borderRadius: { xs: 1.5, sm: 2 },
+                        p: { xs: 1.5, sm: 2, md: 2.5 },
                         textAlign: 'center',
                         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
                         transition: 'all 0.3s ease',
@@ -270,14 +272,14 @@ export default function HeroSection() {
                         },
                       }}
                     >
-                      <Icon size={32} color="white" style={{ marginBottom: 8 }} />
+                      <Icon size={24} color="white" style={{ marginBottom: 6 }} />
                       <Typography
                         variant="h3"
                         sx={{
                           color: 'white',
                           fontWeight: 700,
-                          fontSize: '2rem',
-                          mb: 0.5,
+                          fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' },
+                          mb: 0.25,
                         }}
                       >
                         <AnimatedCounter end={stat.value} suffix={stat.suffix} />
@@ -287,7 +289,7 @@ export default function HeroSection() {
                         sx={{
                           color: 'rgba(255, 255, 255, 0.9)',
                           fontWeight: 500,
-                          fontSize: '0.875rem',
+                          fontSize: { xs: '0.65rem', sm: '0.75rem', md: '0.8rem', lg: '0.875rem' },
                         }}
                       >
                         {stat.label}
@@ -307,14 +309,31 @@ export default function HeroSection() {
           >
             <Box
               sx={{
-                mt: 4,
-                pt: 4,
+                mt: { xs: 2, sm: 3, md: 4 },
+                pt: { xs: 2, sm: 3, md: 4 },
                 borderTop: '1px solid rgba(255, 255, 255, 0.2)',
                 display: 'flex',
-                gap: { xs: 2, sm: 2, md: 2.5 },
-                flexWrap: { xs: 'wrap', md: 'nowrap' },
-                justifyContent: 'center',
+                gap: { xs: 0.75, sm: 1.5, md: 2, lg: 2.5 },
+                flexWrap: 'nowrap',
+                justifyContent: { xs: 'flex-start', md: 'center' },
                 alignItems: 'center',
+                overflowX: { xs: 'auto', md: 'visible' },
+                mx: { xs: -2, sm: -3, md: 0 },
+                px: { xs: 2, sm: 3, md: 0 },
+                '&::-webkit-scrollbar': {
+                  height: '4px',
+                },
+                '&::-webkit-scrollbar-track': {
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  borderRadius: '2px',
+                },
+                '&::-webkit-scrollbar-thumb': {
+                  background: 'rgba(255, 255, 255, 0.3)',
+                  borderRadius: '2px',
+                  '&:hover': {
+                    background: 'rgba(255, 255, 255, 0.4)',
+                  },
+                },
               }}
             >
               {COMPANY_INFO.features.map((feature, index) => (
@@ -329,15 +348,16 @@ export default function HeroSection() {
                     sx={{ 
                       display: 'flex', 
                       alignItems: 'center', 
-                      gap: 0.75,
-                      px: { xs: 1.5, md: 2 },
-                      py: 0.75,
-                      borderRadius: 2,
+                      gap: { xs: 0.5, sm: 0.6, md: 0.75 },
+                      px: { xs: 1.25, sm: 1.5, md: 1.75, lg: 2 },
+                      py: { xs: 0.6, sm: 0.7, md: 0.75 },
+                      borderRadius: { xs: 1.5, sm: 2 },
                       bgcolor: 'rgba(255, 255, 255, 0.05)',
                       backdropFilter: 'blur(5px)',
                       border: '1px solid rgba(255, 255, 255, 0.1)',
                       transition: 'all 0.3s ease',
                       whiteSpace: 'nowrap',
+                      flexShrink: 0,
                       '&:hover': {
                         bgcolor: 'rgba(255, 255, 255, 0.1)',
                         boxShadow: '0 4px 12px rgba(255, 255, 255, 0.1)',
@@ -346,8 +366,8 @@ export default function HeroSection() {
                   >
                     <Box
                       sx={{
-                        width: 6,
-                        height: 6,
+                        width: { xs: 5, sm: 5, md: 6 },
+                        height: { xs: 5, sm: 5, md: 6 },
                         borderRadius: '50%',
                         bgcolor: '#10b981',
                         boxShadow: '0 0 10px rgba(16, 185, 129, 0.5)',
@@ -359,7 +379,7 @@ export default function HeroSection() {
                       sx={{
                         color: 'rgba(255, 255, 255, 0.95)',
                         fontWeight: 500,
-                        fontSize: { xs: '0.8rem', md: '0.85rem' },
+                        fontSize: { xs: '0.75rem', sm: '0.78rem', md: '0.8rem', lg: '0.85rem' },
                       }}
                     >
                       {feature}

@@ -40,7 +40,7 @@ export default function ServicesGrid() {
   const featuredServices = SERVICES.slice(0, 6);
 
   return (
-    <Box sx={{ py: 12, bgcolor: '#f8fafc', position: 'relative', overflow: 'hidden' }}>
+    <Box sx={{ py: { xs: 6, sm: 8, md: 10, lg: 12 }, bgcolor: '#f8fafc', position: 'relative', overflow: 'hidden' }}>
       {/* Background decoration */}
       <Box
         sx={{
@@ -61,7 +61,7 @@ export default function ServicesGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
+          <Box sx={{ textAlign: 'center', mb: { xs: 4, sm: 5, md: 6, lg: 8 } }}>
             <Typography
               variant="overline"
               sx={{
@@ -79,8 +79,8 @@ export default function ServicesGrid() {
               sx={{
                 fontWeight: 700,
                 color: 'text.primary',
-                mb: 2,
-                fontSize: { xs: '2rem', md: '2.5rem' },
+                mb: { xs: 1.5, sm: 2 },
+                fontSize: { xs: '1.75rem', sm: '2rem', md: '2.25rem', lg: '2.5rem' },
               }}
             >
               Our Services
@@ -93,6 +93,7 @@ export default function ServicesGrid() {
                 mx: 'auto',
                 fontWeight: 400,
                 lineHeight: 1.6,
+                fontSize: { xs: '0.95rem', sm: '1rem', md: '1.1rem', lg: '1.25rem' },
               }}
             >
               Comprehensive IT solutions tailored to your needs, from data recovery to system optimization
@@ -105,8 +106,8 @@ export default function ServicesGrid() {
           sx={{
             display: 'grid',
             gridTemplateColumns: { xs: '1fr', md: 'repeat(12, 1fr)' },
-            gap: 3,
-            mb: 6,
+            gap: { xs: 2, sm: 2.5, md: 3 },
+            mb: { xs: 4, sm: 5, md: 6 },
           }}
         >
           {featuredServices.map((service, index) => {
@@ -134,8 +135,8 @@ export default function ServicesGrid() {
                   href="/services"
                   sx={{
                     position: 'relative',
-                    height: isLarge ? { xs: 400, md: 500 } : { xs: 350, md: 400 },
-                    borderRadius: 3,
+                    height: isLarge ? { xs: 350, sm: 400, md: 450, lg: 500 } : { xs: 300, sm: 350, md: 400 },
+                    borderRadius: { xs: 2, sm: 2.5, md: 3 },
                     overflow: 'hidden',
                     display: 'block',
                     textDecoration: 'none',
@@ -200,7 +201,7 @@ export default function ServicesGrid() {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'flex-end',
-                      p: isLarge ? 4 : 3,
+                      p: isLarge ? { xs: 2.5, sm: 3, md: 3.5, lg: 4 } : { xs: 2, sm: 2.5, md: 3 },
                       zIndex: 1,
                     }}
                   >
@@ -210,13 +211,13 @@ export default function ServicesGrid() {
                       size="small"
                       sx={{
                         position: 'absolute',
-                        top: 20,
-                        right: 20,
+                        top: { xs: 16, sm: 18, md: 20 },
+                        right: { xs: 16, sm: 18, md: 20 },
                         bgcolor: 'rgba(255, 255, 255, 0.2)',
                         backdropFilter: 'blur(10px)',
                         color: 'white',
                         fontWeight: 600,
-                        fontSize: '0.75rem',
+                        fontSize: { xs: '0.7rem', sm: '0.72rem', md: '0.75rem' },
                         border: '1px solid rgba(255, 255, 255, 0.3)',
                       }}
                     />
@@ -225,17 +226,17 @@ export default function ServicesGrid() {
                     <Box
                       sx={{
                         display: 'inline-flex',
-                        p: 1.5,
-                        borderRadius: 2,
+                        p: { xs: 1, sm: 1.25, md: 1.5 },
+                        borderRadius: { xs: 1.5, sm: 2 },
                         bgcolor: 'rgba(255, 255, 255, 0.15)',
                         backdropFilter: 'blur(10px)',
                         border: '1px solid rgba(255, 255, 255, 0.2)',
                         color: 'white',
-                        mb: 2,
+                        mb: { xs: 1.5, sm: 2 },
                         width: 'fit-content',
                       }}
                     >
-                      {Icon && <Icon size={isLarge ? 32 : 28} />}
+                      {Icon && <Icon size={isLarge ? 28 : 24} />}
                     </Box>
 
                     {/* Title */}
@@ -244,8 +245,8 @@ export default function ServicesGrid() {
                       sx={{
                         fontWeight: 700,
                         color: 'white',
-                        mb: 1.5,
-                        fontSize: isLarge ? { xs: '1.75rem', md: '2.25rem' } : { xs: '1.25rem', md: '1.5rem' },
+                        mb: { xs: 1, sm: 1.25, md: 1.5 },
+                        fontSize: isLarge ? { xs: '1.4rem', sm: '1.6rem', md: '2rem', lg: '2.25rem' } : { xs: '1.1rem', sm: '1.2rem', md: '1.35rem', lg: '1.5rem' },
                       }}
                     >
                       {service.title}
@@ -257,8 +258,8 @@ export default function ServicesGrid() {
                       sx={{
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.6,
-                        mb: 2,
-                        fontSize: isLarge ? '1rem' : '0.9rem',
+                        mb: { xs: 1.5, sm: 2 },
+                        fontSize: isLarge ? { xs: '0.85rem', sm: '0.9rem', md: '0.95rem', lg: '1rem' } : { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
                         display: '-webkit-box',
                         WebkitLineClamp: isLarge ? 3 : 2,
                         WebkitBoxOrient: 'vertical',
@@ -274,7 +275,7 @@ export default function ServicesGrid() {
                       sx={{
                         display: 'flex',
                         alignItems: 'center',
-                        gap: 1,
+                        gap: { xs: 0.75, sm: 1 },
                         color: 'white',
                         fontWeight: 600,
                         opacity: 0.8,
@@ -282,10 +283,10 @@ export default function ServicesGrid() {
                         transition: 'all 0.3s ease',
                       }}
                     >
-                      <Typography variant="body2" sx={{ fontWeight: 600 }}>
+                      <Typography variant="body2" sx={{ fontWeight: 600, fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.875rem' } }}>
                         Learn More
                       </Typography>
-                      <ArrowRight size={18} />
+                      <ArrowRight size={16} />
                     </Box>
                   </Box>
                 </Box>
@@ -309,9 +310,9 @@ export default function ServicesGrid() {
               size="large"
               endIcon={<ArrowRight />}
               sx={{
-                px: 5,
-                py: 1.75,
-                fontSize: '1.1rem',
+                px: { xs: 3, sm: 4, md: 5 },
+                py: { xs: 1.5, sm: 1.65, md: 1.75 },
+                fontSize: { xs: '1rem', sm: '1.05rem', md: '1.1rem' },
                 fontWeight: 600,
                 borderRadius: 2,
                 textTransform: 'none',
