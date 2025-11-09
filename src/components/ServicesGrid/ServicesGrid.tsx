@@ -148,7 +148,7 @@ export default function ServicesGrid() {
               gridRow = { md: 'span 2' };
             } else {
               // Backups and Restores (Tomato) - 3 cols, 2 rows
-              gridColumn = { xs: 'span 1', sm: 'span 2', md: 'span 3' };
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 3' };
               gridRow = { md: 'span 2' };
             }
 
