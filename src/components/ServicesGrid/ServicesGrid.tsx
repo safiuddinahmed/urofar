@@ -128,13 +128,14 @@ export default function ServicesGrid() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                style={{ gridColumn: gridColumn.md }}
+                style={{ gridColumn: '1 / -1' }}
               >
                 <Box
                   component={Link}
                   href="/services"
                   sx={{
                     position: 'relative',
+                    gridColumn: gridColumn,
                     height: isLarge ? { xs: 350, sm: 400, md: 450, lg: 500 } : { xs: 300, sm: 350, md: 400 },
                     borderRadius: { xs: 2, sm: 2.5, md: 3 },
                     overflow: 'hidden',
