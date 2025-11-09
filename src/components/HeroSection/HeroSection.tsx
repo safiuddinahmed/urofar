@@ -61,7 +61,7 @@ export default function HeroSection() {
         <Beams 
           beamWidth={3.5}
           beamHeight={30}
-          beamNumber={30}
+          beamNumber={24}
           lightColor="#ffffff"
           speed={2}
           noiseIntensity={2}
