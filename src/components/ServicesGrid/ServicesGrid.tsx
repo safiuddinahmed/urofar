@@ -105,27 +105,59 @@ export default function ServicesGrid() {
         <Box
           sx={{
             display: 'grid',
-            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(12, 1fr)' },
+            gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' },
+            gridTemplateRows: { md: 'repeat(4, 1fr)' },
             gap: { xs: 2, sm: 2.5, md: 3 },
             mb: { xs: 4, sm: 5, md: 6 },
+            minHeight: { md: '800px' },
           }}
         >
           {featuredServices.map((service, index) => {
             const Icon = iconMap[service.icon];
             const imageSrc = imageMap[service.id] || 'data-recovery.jpg';
             
-            // Bento grid layout: first card is large (spans 8 cols on desktop, 2 cols on tablet), others span 4 cols on desktop, 1 col on tablet
-            const gridColumn = index === 0 
-              ? { xs: 'span 1', sm: 'span 2', md: 'span 8' }
-              : { xs: 'span 1', sm: 'span 1', md: 'span 4' };
+            // Bento grid layout based on 4x4 grid reference:
+            // Salmon: span 2 cols, 1 row
+            // Broccoli: span 2 cols, 1 row
+            // Tamago: span 1 col, 4 rows (full height)
+            // Pork: span 2 cols, 2 rows
+            // Edamame: span 1 col, 2 rows
+            // Tomato: span 3 cols, 2 rows
+            let gridColumn;
+            let gridRow;
             
-            const isLarge = index === 0;
+            if (index === 0) {
+              // Computer Consultancy (Salmon) - 2 cols, 1 row
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 2' };
+              gridRow = { md: 'span 1' };
+            } else if (index === 1) {
+              // Data Recovery (Broccoli) - 2 cols, 1 row
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 2' };
+              gridRow = { md: 'span 1' };
+            } else if (index === 2) {
+              // System Optimization (Tamago) - 1 col, 4 rows (full height)
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 1' };
+              gridRow = { md: 'span 4' };
+            } else if (index === 3) {
+              // Laptops and Desktops (Pork) - 2 cols, 2 rows
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 2' };
+              gridRow = { md: 'span 2' };
+            } else if (index === 4) {
+              // Installations & Upgrades (Edamame) - 1 col, 2 rows
+              gridColumn = { xs: 'span 1', sm: 'span 1', md: 'span 1' };
+              gridRow = { md: 'span 2' };
+            } else {
+              // Backups and Restores (Tomato) - 3 cols, 2 rows
+              gridColumn = { xs: 'span 1', sm: 'span 2', md: 'span 3' };
+              gridRow = { md: 'span 2' };
+            }
 
             return (
               <Box
                 key={service.id}
                 sx={{
                   gridColumn: gridColumn,
+                  gridRow: gridRow,
                 }}
               >
                 <motion.div
@@ -140,7 +172,7 @@ export default function ServicesGrid() {
                     href="/services"
                     sx={{
                       position: 'relative',
-                      height: isLarge ? { xs: 350, sm: 450, md: 450, lg: 500 } : { xs: 300, sm: 350, md: 400 },
+                      height: '100%',
                       borderRadius: { xs: 2, sm: 2.5, md: 3 },
                       overflow: 'hidden',
                       display: 'block',
@@ -180,7 +212,7 @@ export default function ServicesGrid() {
                       alt={service.title}
                       fill
                       style={{ objectFit: 'cover' }}
-                      sizes={isLarge ? "(max-width: 768px) 100vw, 66vw" : "(max-width: 768px) 100vw, 33vw"}
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </Box>
 
@@ -206,7 +238,7 @@ export default function ServicesGrid() {
                       display: 'flex',
                       flexDirection: 'column',
                       justifyContent: 'flex-end',
-                      p: isLarge ? { xs: 2.5, sm: 3, md: 3.5, lg: 4 } : { xs: 2, sm: 2.5, md: 3 },
+                      p: { xs: 2, sm: 2.5, md: 3 },
                       zIndex: 1,
                     }}
                   >
@@ -241,17 +273,17 @@ export default function ServicesGrid() {
                         width: 'fit-content',
                       }}
                     >
-                      {Icon && <Icon size={isLarge ? 28 : 24} />}
+                      {Icon && <Icon size={24} />}
                     </Box>
 
                     {/* Title */}
                     <Typography
-                      variant={isLarge ? 'h3' : 'h5'}
+                      variant="h5"
                       sx={{
                         fontWeight: 700,
                         color: 'white',
                         mb: { xs: 1, sm: 1.25, md: 1.5 },
-                        fontSize: isLarge ? { xs: '1.4rem', sm: '1.6rem', md: '2rem', lg: '2.25rem' } : { xs: '1.1rem', sm: '1.2rem', md: '1.35rem', lg: '1.5rem' },
+                        fontSize: { xs: '1.1rem', sm: '1.2rem', md: '1.35rem', lg: '1.5rem' },
                       }}
                     >
                       {service.title}
@@ -264,9 +296,9 @@ export default function ServicesGrid() {
                         color: 'rgba(255, 255, 255, 0.9)',
                         lineHeight: 1.6,
                         mb: { xs: 1.5, sm: 2 },
-                        fontSize: isLarge ? { xs: '0.85rem', sm: '0.9rem', md: '0.95rem', lg: '1rem' } : { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+                        fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
                         display: '-webkit-box',
-                        WebkitLineClamp: isLarge ? 3 : 2,
+                        WebkitLineClamp: index === 2 || index === 4 ? 4 : 2,
                         WebkitBoxOrient: 'vertical',
                         overflow: 'hidden',
                       }}
