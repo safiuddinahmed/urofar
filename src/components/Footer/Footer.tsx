@@ -118,7 +118,22 @@ export default function Footer() {
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </Typography>
           <Typography variant="body2" sx={{ color: 'grey.500', textAlign: { xs: 'center', sm: 'right' } }}>
-            Built with excellence for our valued clients
+            Powered by{' '}
+            <a
+              href="https://www.snow-peak.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: '#0891b2',
+                textDecoration: 'none',
+                fontWeight: 500,
+                transition: 'color 0.2s ease',
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#06b6d4')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#0891b2')}
+            >
+              SnowPeak
+            </a>
           </Typography>
         </Box>
       </Container>
