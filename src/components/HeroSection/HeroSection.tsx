@@ -239,6 +239,7 @@ export default function HeroSection() {
                 display: 'grid',
                 gridTemplateColumns: 'repeat(4, 1fr)',
                 gap: { xs: 1, sm: 1.5, md: 2 },
+                alignItems: 'stretch',
               }}
             >
               {[
@@ -255,9 +256,14 @@ export default function HeroSection() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
                     whileHover={{ scale: 1.05, y: -5 }}
+                    style={{ height: '100%' }}
                   >
                     <Box
                       sx={{
+                        height: '100%',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
                         backdropFilter: 'blur(10px)',
                         bgcolor: 'rgba(255, 255, 255, 0.1)',
                         border: '1px solid rgba(255, 255, 255, 0.2)',
