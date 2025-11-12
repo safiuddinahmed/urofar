@@ -239,6 +239,7 @@ export const TESTIMONIALS = [
 export const NAVIGATION_ITEMS = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
+  { label: 'Products', href: '/products' },
   { label: 'Testimonials', href: '/testimonials' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
