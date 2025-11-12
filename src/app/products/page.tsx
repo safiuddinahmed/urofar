@@ -33,7 +33,10 @@ export default async function ProductsPage() {
   return (
     <>
       <ProductsContent categories={categories} />
-      <CallToAction />
+      <CallToAction 
+        title="Interested in Our Products?"
+        description="Call us today to inquire about pricing, availability, or to place an order. Our team is ready to help you find the perfect solution for your needs."
+      />
     </>
   )
 }

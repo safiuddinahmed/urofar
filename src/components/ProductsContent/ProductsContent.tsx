@@ -260,22 +260,10 @@ export default function ProductsContent({ categories }: ProductsContentProps) {
                     {/* Category Header */}
                     <Box sx={{ mb: 5, textAlign: 'center' }}>
                       <Typography
-                        variant="overline"
-                        sx={{
-                          color: 'primary.main',
-                          fontWeight: 600,
-                          letterSpacing: 1.5,
-                          mb: 1,
-                          display: 'block',
-                        }}
-                      >
-                        CATEGORY
-                      </Typography>
-                      <Typography
                         variant="h3"
                         component="h2"
                         gutterBottom
-                        sx={{ fontWeight: 700, color: 'text.primary', mb: 1 }}
+                        sx={{ fontWeight: 700, color: 'text.primary', mb: 2 }}
                       >
                         {category.name}
                       </Typography>
@@ -321,33 +309,6 @@ export default function ProductsContent({ categories }: ProductsContentProps) {
                 </motion.div>
               )
             })
-          )}
-
-          {/* Admin Note */}
-          {hasProducts && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Box
-                sx={{
-                  mt: 8,
-                  p: 3,
-                  backgroundColor: 'info.light',
-                  borderRadius: 2,
-                  textAlign: 'center',
-                }}
-              >
-                <Typography variant="body2" color="info.dark" sx={{ fontWeight: 600 }}>
-                  <strong>Admin:</strong> To manage products and categories, visit{' '}
-                  <a href="/studio" style={{ color: 'inherit', textDecoration: 'underline' }}>
-                    /studio
-                  </a>
-                </Typography>
-              </Box>
-            </motion.div>
           )}
         </Container>
       </Box>

@@ -5,7 +5,15 @@ import { motion } from 'framer-motion';
 import { Phone, Mail } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/constants';
 
-export default function CallToAction() {
+interface CallToActionProps {
+  title?: string;
+  description?: string;
+}
+
+export default function CallToAction({ 
+  title = "Ready to Get Started?",
+  description = "Contact us today for expert computer support and data recovery services"
+}: CallToActionProps) {
   return (
     <Box
       sx={{
@@ -46,7 +54,7 @@ export default function CallToAction() {
                 fontSize: { xs: '2rem', md: '2.5rem' },
               }}
             >
-              Ready to Get Started?
+              {title}
             </Typography>
             <Typography
               variant="h6"
@@ -57,7 +65,7 @@ export default function CallToAction() {
                 mx: 'auto',
               }}
             >
-              Contact us today for expert computer support and data recovery services
+              {description}
             </Typography>
 
             <Box

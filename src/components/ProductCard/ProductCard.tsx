@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardMedia, Typography, Box, Chip } from '@mui/material'
-import { ShoppingCart, Package } from 'lucide-react'
+import { Package } from 'lucide-react'
 import { urlFor } from '@/sanity/lib/image'
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types'
 
@@ -71,43 +71,6 @@ export default function ProductCard({ title, description, price, quantity, image
             transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         />
-        
-        {/* Hover Overlay */}
-        <Box
-          className="product-overlay"
-          sx={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: 'linear-gradient(to top, rgba(30, 58, 138, 0.7) 0%, transparent 50%)',
-            opacity: 0,
-            transition: 'opacity 0.4s ease',
-            display: 'flex',
-            alignItems: 'flex-end',
-            justifyContent: 'center',
-            pb: 2,
-          }}
-        >
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 1,
-              px: 2,
-              py: 1,
-              borderRadius: 2,
-              bgcolor: 'rgba(255, 255, 255, 0.95)',
-              backdropFilter: 'blur(10px)',
-            }}
-          >
-            <ShoppingCart size={18} color="#1976d2" />
-            <Typography variant="body2" sx={{ fontWeight: 600, color: 'primary.main' }}>
-              View Details
-            </Typography>
-          </Box>
-        </Box>
 
         {/* Stock Badge */}
         <Chip
@@ -200,23 +163,11 @@ export default function ProductCard({ title, description, price, quantity, image
             }}
           >
             <Typography 
-              variant="caption" 
-              color="text.secondary"
-              sx={{ 
-                display: 'block',
-                fontSize: '0.7rem',
-                mb: 0.5,
-                fontWeight: 500,
-              }}
-            >
-              Price
-            </Typography>
-            <Typography 
               variant="h5" 
               sx={{ 
                 fontWeight: 800,
                 color: 'primary.main',
-                fontSize: '1.5rem',
+                fontSize: '1.75rem',
                 lineHeight: 1,
               }}
             >
@@ -224,53 +175,31 @@ export default function ProductCard({ title, description, price, quantity, image
             </Typography>
           </Box>
 
-          {/* Quantity */}
-          <Box sx={{ textAlign: 'right' }}>
+          {/* Quantity Badge */}
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 1,
+              px: 2,
+              py: 1,
+              borderRadius: 2,
+              bgcolor: inStock ? 'rgba(46, 125, 50, 0.08)' : 'rgba(211, 47, 47, 0.08)',
+              border: '1.5px solid',
+              borderColor: inStock ? 'success.main' : 'error.main',
+            }}
+          >
+            <Package size={16} color={inStock ? '#2e7d32' : '#d32f2f'} />
             <Typography 
-              variant="caption" 
-              color="text.secondary"
+              variant="h6" 
               sx={{ 
-                display: 'block',
-                fontSize: '0.7rem',
-                mb: 0.5,
-                fontWeight: 500,
+                fontWeight: 700,
+                color: inStock ? 'success.dark' : 'error.dark',
+                fontSize: '1.1rem',
               }}
             >
-              Available
+              {quantity}
             </Typography>
-            <Box
-              sx={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 0.5,
-                px: 1.5,
-                py: 0.5,
-                borderRadius: 1.5,
-                bgcolor: inStock ? 'success.light' : 'error.light',
-                border: '1px solid',
-                borderColor: inStock ? 'success.main' : 'error.main',
-              }}
-            >
-              <Typography 
-                variant="body2" 
-                sx={{ 
-                  fontWeight: 700,
-                  color: inStock ? 'success.dark' : 'error.dark',
-                  fontSize: '0.9rem',
-                }}
-              >
-                {quantity}
-              </Typography>
-              <Typography 
-                variant="caption" 
-                sx={{ 
-                  color: inStock ? 'success.dark' : 'error.dark',
-                  fontSize: '0.7rem',
-                }}
-              >
-                units
-              </Typography>
-            </Box>
           </Box>
         </Box>
       </CardContent>
