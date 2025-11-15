@@ -50,7 +50,7 @@ const imageMap: Record<string, string> = {
   'data-recovery': 'data-recovery.jpg',
   'system-optimization': 'optimization.jpg',
   'laptops-desktops': 'hardware.jpg',
-  'installations-upgrades': 'optimization.jpg',
+  'installations-upgrades': 'install-upgrade.jpg',
   'backups-restores': 'backup.jpg',
   'diagnosis-troubleshooting': 'diagnosis.jpg',
   'hardware-software-support': 'support.jpg',
