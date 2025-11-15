@@ -291,7 +291,7 @@ export const STATS = [
 
 export const MISSION_STATEMENT = `UROFAR Computer and Data Recovery Solutions' mission is to provide the highest quality and cost effective services to its clients in order to help them resolve their issues.
 
-We, at UC&DRS;, will strive each day to help our clients in their computer related issues through honest, reliable, efficient and professional services. We will follow the highest moral, ethical and legal standards by providing the maximum economical and efficient solutions to our client's requirements.`;
+We, at UROFAR, will strive each day to help our clients in their computer related issues through honest, reliable, efficient and professional services. We will follow the highest moral, ethical and legal standards by providing the maximum economical and efficient solutions to our client's requirements.`;
 
 export const WHY_CHOOSE_US = [
   {

@@ -195,7 +195,7 @@ export default function AboutPage() {
                   fontSize: { xs: '0.95rem', md: '1rem' },
                 }}
               >
-                We, at UC&DRS;, will strive each day to help our clients in their computer related issues through honest, reliable, efficient and professional services. We will follow the highest moral, ethical and legal standards by providing the maximum economical and efficient solutions to our client&apos;s requirements.
+                We, at UROFAR, will strive each day to help our clients in their computer related issues through honest, reliable, efficient and professional services. We will follow the highest moral, ethical and legal standards by providing the maximum economical and efficient solutions to our client&apos;s requirements.
               </Typography>
             </Paper>
           </motion.div>
@@ -259,6 +259,7 @@ export default function AboutPage() {
                     sx={{
                       p: 4,
                       width: '100%',
+                      minHeight: 220,
                       display: 'flex',
                       flexDirection: 'column',
                       borderRadius: 3,
@@ -553,6 +554,7 @@ export default function AboutPage() {
                   sx={{
                     p: 3,
                     height: '100%',
+                    minHeight: 80,
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -823,6 +825,9 @@ export default function AboutPage() {
                         p: 2.5,
                         borderRadius: 3,
                         bgcolor: 'white',
+                        minHeight: 100,
+                        display: 'flex',
+                        alignItems: 'center',
                         boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
                         transition: 'all 0.3s ease',
                         '&:hover': {
@@ -924,10 +929,13 @@ export default function AboutPage() {
                   elevation={0}
                   sx={{
                     p: 3,
+                    minHeight: 80,
                     borderRadius: 3,
                     bgcolor: 'white',
                     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.3s ease',
+                    display: 'flex',
+                    alignItems: 'center',
                     '&:hover': {
                       transform: 'translateY(-4px)',
                       boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
