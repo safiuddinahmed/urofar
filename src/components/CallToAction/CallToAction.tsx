@@ -11,8 +11,8 @@ interface CallToActionProps {
 }
 
 export default function CallToAction({ 
-  title = "Ready to Get Started?",
-  description = "Contact us today for expert computer support and data recovery services"
+  title = "Book a Consultation",
+  description = "Get expert IT support tailored to your needs. Schedule your free consultation today."
 }: CallToActionProps) {
   return (
     <Box

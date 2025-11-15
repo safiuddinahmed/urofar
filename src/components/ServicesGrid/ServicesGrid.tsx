@@ -318,7 +318,7 @@ export default function ServicesGrid() {
                         color: 'white',
                         fontWeight: 600,
                         opacity: 0.8,
-                        transform: 'translateX(-10px)',
+                        transform: 'translateX(0)',
                         transition: 'all 0.3s ease',
                       }}
                     >

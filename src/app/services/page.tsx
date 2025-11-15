@@ -482,6 +482,10 @@ export default function ServicesPage() {
                       border: '2px solid',
                       borderColor: 'primary.main',
                       textAlign: 'center',
+                      minHeight: 110,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
                       transition: 'all 0.3s ease',
                       '&:hover': {
                         transform: 'translateY(-4px)',
@@ -532,7 +536,7 @@ export default function ServicesPage() {
                         borderRadius: 2,
                         bgcolor: 'white',
                         border: '1px solid',
-                        borderColor: 'grey.200',
+                        borderColor: 'primary.main',
                         textAlign: 'center',
                         transition: 'all 0.3s ease',
                         '&:hover': {
