@@ -109,10 +109,11 @@ export default function HeroSection() {
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
-                fontWeight: 700,
+                fontWeight: 800,
                 fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3.5rem', lg: '4rem' },
                 mb: { xs: 1, sm: 1.5, md: 2 },
                 lineHeight: 1.2,
+                letterSpacing: '-0.02em',
                 textShadow: '0 0 40px rgba(255,255,255,0.5)',
               }}
             >

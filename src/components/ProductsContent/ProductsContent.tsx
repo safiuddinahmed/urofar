@@ -121,13 +121,14 @@ export default function ProductsContent({ categories }: ProductsContentProps) {
             <Typography
               variant="h1"
               sx={{
-                fontWeight: 700,
+                fontWeight: 800,
                 mb: 2,
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontSize: { xs: '2.5rem', md: '3.75rem' },
                 background: 'linear-gradient(to right, #ffffff, #e0e7ff)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                letterSpacing: '-0.02em',
               }}
             >
               Our Products
@@ -139,7 +140,7 @@ export default function ProductsContent({ categories }: ProductsContentProps) {
               sx={{
                 maxWidth: '800px',
                 opacity: 0.95,
-                lineHeight: 1.6,
+                lineHeight: 1.7,
                 mb: 4,
                 fontWeight: 400,
               }}

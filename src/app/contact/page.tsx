@@ -40,37 +40,85 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Box
         sx={{
+          position: 'relative',
           bgcolor: 'primary.main',
           color: 'white',
-          py: 8,
+          py: { xs: 8, md: 12 },
+          overflow: 'hidden',
         }}
       >
-        <Container maxWidth="lg">
+        {/* Gradient Background */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #6366f1 100%)',
+            opacity: 0.9,
+          }}
+        />
+
+        {/* Decorative Elements */}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '-10%',
+            right: '-5%',
+            width: '400px',
+            height: '400px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+        <Box
+          sx={{
+            position: 'absolute',
+            bottom: '-10%',
+            left: '-5%',
+            width: '300px',
+            height: '300px',
+            borderRadius: '50%',
+            background: 'radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%)',
+            pointerEvents: 'none',
+          }}
+        />
+
+        <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <Typography
-              variant="h2"
+              variant="h1"
               sx={{
-                fontWeight: 700,
+                fontWeight: 800,
                 mb: 2,
                 textAlign: 'center',
+                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                background: 'linear-gradient(to right, #ffffff, #e0e7ff)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
               }}
             >
-              Contact Us
+              Get in Touch
             </Typography>
             <Typography
-              variant="h6"
+              variant="h5"
               sx={{
                 textAlign: 'center',
                 maxWidth: '800px',
                 mx: 'auto',
-                opacity: 0.9,
+                opacity: 0.95,
+                lineHeight: 1.6,
+                fontWeight: 400,
               }}
             >
-              Get in touch with our team for expert IT support and solutions
+              Reach out to our team for expert IT support and solutions
             </Typography>
           </motion.div>
         </Container>

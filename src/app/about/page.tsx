@@ -91,14 +91,15 @@ export default function AboutPage() {
             <Typography
               variant="h1"
               sx={{
-                fontWeight: 700,
+                fontWeight: 800,
                 mb: 2,
                 textAlign: 'center',
-                fontSize: { xs: '2.5rem', md: '3.5rem' },
+                fontSize: { xs: '2.5rem', md: '3.75rem' },
                 background: 'linear-gradient(to right, #ffffff, #e0e7ff)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
+                letterSpacing: '-0.02em',
               }}
             >
               About {COMPANY_INFO.name}
@@ -111,7 +112,7 @@ export default function AboutPage() {
                 mx: 'auto',
                 opacity: 0.95,
                 fontWeight: 400,
-                lineHeight: 1.6,
+                lineHeight: 1.7,
               }}
             >
               {COMPANY_INFO.tagline}
