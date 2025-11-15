@@ -22,9 +22,29 @@ export const COMPANY_INFO = {
     weekend: 'Saturday - Sunday: By Appointment',
   },
   owner: {
-    name: 'Mr. Waheed Sarguroh',
-    title: 'Owner/Computer Technician',
-    specialization: 'Network Specialist (Diploma with Distinction)',
+    name: 'Waheed Sarguroh',
+    title: 'Owner & Senior IT Consultant',
+    subtitle: 'Desktop Support Specialist',
+    specialization: 'Network Specialist - MCSE (Microsoft Certified Systems Engineer)',
+    experience: '17+ years of IT experience',
+    corporateExperience: '9+ years in corporate desktop support and field engineering',
+    education: 'Diploma in Network Specialist - MCSE from triOS College (2008)',
+    expertise: [
+      'Desktop Support & Field Engineering',
+      'Technical Systems Analysis',
+      'Windows 7, 8.1, 10, 11 & Office 365',
+      'VPN, Network Printers & Remote Support',
+      'ServiceNow, Remedy & Enterprise Tools',
+    ],
+    majorClients: [
+      'WestJet Airlines',
+      'PepsiCo Beverages',
+      'Air Canada',
+      'Canada Bread',
+      'Oracle Canada',
+      'G4S Secure Solutions',
+      'Burger King Restaurants',
+    ],
   },
   certifications: [
     'Microsoft Certified Systems Engineer (MCSE)',
@@ -248,7 +268,7 @@ export const NAVIGATION_ITEMS = [
 export const STATS = [
   {
     label: 'Years of Experience',
-    value: '15+',
+    value: '17+',
     icon: 'Calendar',
   },
   {
@@ -257,8 +277,8 @@ export const STATS = [
     icon: 'Award',
   },
   {
-    label: 'Happy Clients',
-    value: '500+',
+    label: 'Clients Served',
+    value: '2,000+',
     icon: 'Users',
   },
   {
