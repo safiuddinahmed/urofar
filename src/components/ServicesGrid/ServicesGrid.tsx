@@ -60,8 +60,8 @@ export default function ServicesGrid() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4 }}
         >
           <Box sx={{ textAlign: 'center', mb: { xs: 4, sm: 5, md: 6, lg: 8 } }}>
             <Typography
@@ -165,8 +165,8 @@ export default function ServicesGrid() {
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
                   style={{ height: '100%' }}
                 >
                   <Box
@@ -339,8 +339,8 @@ export default function ServicesGrid() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
         >
           <Box sx={{ textAlign: 'center' }}>
             <Button

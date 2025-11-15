@@ -100,7 +100,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.3 }}
           >
             <Typography
               variant="h1"
@@ -124,7 +124,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.1 }}
           >
             <Typography
               variant="h2"
@@ -142,7 +142,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.15 }}
           >
             <Typography
               variant="h5"
@@ -161,7 +161,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <Box sx={{ display: 'flex', gap: { xs: 1, sm: 1.5, md: 2 }, flexWrap: 'nowrap' }}>
               <motion.div
@@ -232,7 +232,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
           >
             <Box
               sx={{
@@ -255,7 +255,7 @@ export default function HeroSection() {
                     key={index}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
+                    transition={{ duration: 0.3, delay: 0.35 + index * 0.05 }}
                     whileHover={{ scale: 1.05, y: -5 }}
                     style={{ height: '100%' }}
                   >
@@ -312,7 +312,7 @@ export default function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
+            transition={{ duration: 0.4, delay: 0.5 }}
           >
             <Box
               sx={{
@@ -348,7 +348,7 @@ export default function HeroSection() {
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: 1.4 + index * 0.1 }}
+                  transition={{ duration: 0.3, delay: 0.55 + index * 0.05 }}
                   whileHover={{ scale: 1.05 }}
                 >
                   <Box 

@@ -16,8 +16,8 @@ export default function Footer() {
             <Image
               src="/UROFAR-logo/default.png"
               alt="UROFAR Logo"
-              width={180}
-              height={60}
+              width={135}
+              height={45}
               style={{ objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
             />
             <Typography variant="body2" sx={{ mt: 2, mb: 1, color: 'grey.400' }}>

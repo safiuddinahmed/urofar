@@ -22,8 +22,8 @@ export default function Navigation() {
         <Image
           src="/UROFAR-logo/default.png"
           alt="UROFAR Logo"
-          width={120}
-          height={40}
+          width={90}
+          height={30}
           style={{ objectFit: 'contain' }}
         />
         <IconButton onClick={handleDrawerToggle}>
@@ -66,8 +66,8 @@ export default function Navigation() {
               <Image
                 src="/UROFAR-logo/default.png"
                 alt="UROFAR Logo"
-                width={150}
-                height={50}
+                width={112}
+                height={38}
                 style={{ objectFit: 'contain' }}
                 priority
               />
