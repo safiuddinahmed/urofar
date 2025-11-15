@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Container, Typography, Paper, TextField, Button } from '@mui/material';
+import { Box, Container, Typography, Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { COMPANY_INFO } from '@/data/constants';
@@ -207,147 +207,68 @@ export default function ContactPage() {
             })}
           </Box>
 
-          {/* Contact Form and Map */}
-          <Box
-            sx={{
-              display: 'grid',
-              gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-              gap: 4,
-            }}
+          {/* Map Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
           >
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Paper sx={{ p: 4 }}>
+            <Paper sx={{ p: 4 }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontWeight: 600,
+                  mb: 3,
+                  textAlign: 'center',
+                }}
+              >
+                Visit Our Office
+              </Typography>
+              <Box
+                sx={{
+                  width: '100%',
+                  height: { xs: 300, md: 400 },
+                  bgcolor: 'grey.200',
+                  borderRadius: 2,
+                  mb: 3,
+                  overflow: 'hidden',
+                }}
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.8!2d-79.6!3d43.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM2JzAwLjAiTiA3OcKwMzYnMDAuMCJX!5e0!3m2!1sen!2sca!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </Box>
+              <Box
+                sx={{
+                  p: 3,
+                  bgcolor: 'primary.light',
+                  borderRadius: 2,
+                  color: 'white',
+                  textAlign: 'center',
+                }}
+              >
                 <Typography
-                  variant="h5"
+                  variant="h6"
                   sx={{
                     fontWeight: 600,
-                    mb: 3,
+                    mb: 1,
                   }}
                 >
-                  Send us a Message
+                  PLEASE NOTE
                 </Typography>
-                <Box
-                  component="form"
-                  sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    gap: 2,
-                  }}
-                >
-                  <TextField
-                    label="Name"
-                    variant="outlined"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    label="Email"
-                    type="email"
-                    variant="outlined"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    label="Phone"
-                    type="tel"
-                    variant="outlined"
-                    fullWidth
-                  />
-                  <TextField
-                    label="Subject"
-                    variant="outlined"
-                    fullWidth
-                    required
-                  />
-                  <TextField
-                    label="Message"
-                    variant="outlined"
-                    fullWidth
-                    required
-                    multiline
-                    rows={4}
-                  />
-                  <Button
-                    variant="contained"
-                    size="large"
-                    sx={{
-                      mt: 2,
-                      py: 1.5,
-                    }}
-                  >
-                    Send Message
-                  </Button>
-                </Box>
-              </Paper>
-            </motion.div>
-
-            {/* Map and Additional Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <Paper sx={{ p: 4, height: '100%' }}>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontWeight: 600,
-                    mb: 3,
-                  }}
-                >
-                  Visit Our Office
+                <Typography variant="body2">
+                  There are ample free parking spaces available for our clients
                 </Typography>
-                <Box
-                  sx={{
-                    width: '100%',
-                    height: 300,
-                    bgcolor: 'grey.200',
-                    borderRadius: 2,
-                    mb: 3,
-                    overflow: 'hidden',
-                  }}
-                >
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.8!2d-79.6!3d43.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM2JzAwLjAiTiA3OcKwMzYnMDAuMCJX!5e0!3m2!1sen!2sca!4v1234567890"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </Box>
-                <Box
-                  sx={{
-                    p: 3,
-                    bgcolor: 'primary.light',
-                    borderRadius: 2,
-                    color: 'white',
-                  }}
-                >
-                  <Typography
-                    variant="h6"
-                    sx={{
-                      fontWeight: 600,
-                      mb: 1,
-                    }}
-                  >
-                    PLEASE NOTE
-                  </Typography>
-                  <Typography variant="body2">
-                    There are ample free parking spaces available for our clients
-                  </Typography>
-                </Box>
-              </Paper>
-            </motion.div>
-          </Box>
+              </Box>
+            </Paper>
+          </motion.div>
         </Container>
       </Box>
     </>

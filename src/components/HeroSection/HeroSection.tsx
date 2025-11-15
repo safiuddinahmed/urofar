@@ -205,7 +205,7 @@ export default function HeroSection() {
                   startIcon={<Phone size={18} />}
                   sx={{
                     borderColor: 'white',
-                    borderWidth: 2,
+                    borderWidth: 1,
                     color: 'white',
                     px: { xs: 2, sm: 3, md: 4 },
                     py: { xs: 1, sm: 1.25, md: 1.5 },
