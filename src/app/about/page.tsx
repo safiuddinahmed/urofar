@@ -445,19 +445,41 @@ export default function AboutPage() {
                   </Typography>
                   
                   {/* Experience Badges */}
-                  <Box sx={{ display: 'flex', gap: 1, mb: 3, flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+                  <Box sx={{ display: 'flex', gap: 1, mb: 3, flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' }, width: '100%', maxWidth: '100%' }}>
                     <Chip
                       label={COMPANY_INFO.owner.experience}
                       color="primary"
                       size="small"
-                      sx={{ fontWeight: 600 }}
+                      sx={{ 
+                        fontWeight: 600,
+                        maxWidth: '100%',
+                        height: 'auto',
+                        '& .MuiChip-label': {
+                          whiteSpace: 'normal',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word',
+                          display: 'block',
+                          padding: '6px 12px',
+                        }
+                      }}
                     />
                     <Chip
                       label={COMPANY_INFO.owner.corporateExperience}
                       variant="outlined"
                       color="primary"
                       size="small"
-                      sx={{ fontWeight: 600 }}
+                      sx={{ 
+                        fontWeight: 600,
+                        maxWidth: '100%',
+                        height: 'auto',
+                        '& .MuiChip-label': {
+                          whiteSpace: 'normal',
+                          wordBreak: 'break-word',
+                          overflowWrap: 'break-word',
+                          display: 'block',
+                          padding: '6px 12px',
+                        }
+                      }}
                     />
                   </Box>
 
@@ -468,6 +490,8 @@ export default function AboutPage() {
                       color: 'text.secondary',
                       fontSize: { xs: '0.95rem', md: '1rem' },
                       mb: 2,
+                      wordBreak: 'break-word',
+                      overflowWrap: 'break-word',
                     }}
                   >
                     Highly motivated professional with extensive experience in desktop support, field engineering, and technical systems analysis. Proven expertise in supporting 500+ users across corporate, airport, and manufacturing environments.
@@ -479,6 +503,8 @@ export default function AboutPage() {
                       lineHeight: 1.8,
                       color: 'text.secondary',
                       fontSize: { xs: '0.95rem', md: '1rem' },
+                      wordBreak: 'break-word',
+                      overflowWrap: 'break-word',
                     }}
                   >
                     Delivered comprehensive deskside support to over 2,000 clients across approximately 37 locations throughout Canada, utilizing walk-in, remote, and individual on-site assistance.
