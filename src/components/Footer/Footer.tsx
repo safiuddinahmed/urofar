@@ -117,7 +117,7 @@ export default function Footer() {
           <Typography variant="body2" sx={{ color: 'grey.500', textAlign: { xs: 'center', sm: 'left' } }}>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: { xs: 'center', sm: 'flex-end' } }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, justifyContent: { xs: 'center', sm: 'flex-end' } }}>
             <Typography variant="body2" sx={{ color: 'grey.500' }}>
               Powered by
             </Typography>
@@ -142,9 +142,9 @@ export default function Footer() {
               <Image
                 src="/images/snowpeak-logo-white.svg"
                 alt="SnowPeak"
-                width={140}
-                height={35}
-                style={{ objectFit: 'contain' }}
+                width={160}
+                height={40}
+                style={{ objectFit: 'contain', marginLeft: '-12px' }}
               />
             </a>
           </Box>
