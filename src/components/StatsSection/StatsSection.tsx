@@ -39,6 +39,7 @@ export default function StatsSection() {
                     p: 3,
                     borderRadius: 2,
                     bgcolor: 'white',
+                    width: '100%',
                     boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
