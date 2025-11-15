@@ -254,19 +254,19 @@ export default function AboutPage() {
                   style={{ display: 'flex', height: '100%' }}
                 >
                   <Paper
+                    elevation={0}
                     sx={{
                       p: 4,
                       width: '100%',
                       display: 'flex',
                       flexDirection: 'column',
                       borderRadius: 3,
+                      bgcolor: 'white',
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                       transition: 'all 0.3s ease',
-                      border: '1px solid',
-                      borderColor: 'grey.200',
                       '&:hover': {
-                        transform: 'translateY(-8px)',
-                        boxShadow: '0 12px 32px rgba(30, 58, 138, 0.15)',
-                        borderColor: 'primary.main',
+                        transform: 'translateY(-4px)',
+                        boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
                         '& .value-icon': {
                           transform: 'scale(1.1) rotate(5deg)',
                           bgcolor: 'primary.dark',
@@ -359,14 +359,14 @@ export default function AboutPage() {
               sx={{ 
                 p: { xs: 4, md: 6 },
                 borderRadius: 3,
-                border: '1px solid',
-                borderColor: 'grey.200',
+                bgcolor: 'white',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                 maxWidth: '900px',
                 mx: 'auto',
                 transition: 'all 0.3s ease',
                 '&:hover': {
-                  boxShadow: '0 12px 32px rgba(30, 58, 138, 0.1)',
-                  borderColor: 'primary.main',
+                  transform: 'translateY(-4px)',
+                  boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
                 },
               }}
             >
@@ -548,6 +548,7 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Paper
+                  elevation={0}
                   sx={{
                     p: 3,
                     height: '100%',
@@ -555,35 +556,25 @@ export default function AboutPage() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     textAlign: 'center',
-                    borderRadius: 2,
-                    border: '2px solid',
-                    borderColor: 'grey.200',
+                    borderRadius: 3,
+                    bgcolor: 'white',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
-                      borderColor: 'primary.main',
                       transform: 'translateY(-4px)',
-                      boxShadow: '0 8px 24px rgba(30, 58, 138, 0.15)',
-                      bgcolor: 'primary.light',
-                      '& .client-name': {
-                        color: 'primary.dark',
-                      },
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
                     },
                   }}
                 >
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <Briefcase size={20} color="#1e3a8a" />
-                    <Typography
-                      className="client-name"
-                      variant="body1"
-                      sx={{
-                        fontWeight: 600,
-                        color: 'text.primary',
-                        transition: 'color 0.3s ease',
-                      }}
-                    >
-                      {client}
-                    </Typography>
-                  </Box>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontWeight: 600,
+                      color: '#334155',
+                    }}
+                  >
+                    {client}
+                  </Typography>
                 </Paper>
               </motion.div>
             ))}
@@ -611,14 +602,20 @@ export default function AboutPage() {
                     textAlign: 'center',
                     bgcolor: 'white',
                     borderRadius: 3,
-                    border: '2px solid',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                    borderTop: '3px solid',
                     borderColor: 'primary.main',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
+                    },
                   }}
                 >
                   <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }}>
                     500+
                   </Typography>
-                  <Typography variant="body1" sx={{ color: 'text.secondary', fontWeight: 600 }}>
+                  <Typography variant="body1" sx={{ color: '#64748b', fontWeight: 600 }}>
                     Users Supported
                   </Typography>
                 </Paper>
@@ -635,15 +632,21 @@ export default function AboutPage() {
                     p: 4,
                     textAlign: 'center',
                     bgcolor: 'white',
-                    borderRadius: 3,
-                    border: '2px solid',
+                    borderRadius: 4,
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                    borderTop: '3px solid',
                     borderColor: 'primary.main',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
+                    },
                   }}
                 >
                   <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }}>
                     2,000+
                   </Typography>
-                  <Typography variant="body1" sx={{ color: 'text.secondary', fontWeight: 600 }}>
+                  <Typography variant="body1" sx={{ color: '#64748b', fontWeight: 600 }}>
                     Clients Served
                   </Typography>
                 </Paper>
@@ -660,15 +663,21 @@ export default function AboutPage() {
                     p: 4,
                     textAlign: 'center',
                     bgcolor: 'white',
-                    borderRadius: 3,
-                    border: '2px solid',
+                    borderRadius: 4,
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                    borderTop: '3px solid',
                     borderColor: 'primary.main',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
+                    },
                   }}
                 >
                   <Typography variant="h3" sx={{ fontWeight: 700, color: 'primary.main', mb: 1 }}>
                     37
                   </Typography>
-                  <Typography variant="body1" sx={{ color: 'text.secondary', fontWeight: 600 }}>
+                  <Typography variant="body1" sx={{ color: '#64748b', fontWeight: 600 }}>
                     Locations
                   </Typography>
                 </Paper>
@@ -726,30 +735,35 @@ export default function AboutPage() {
                   p: 4,
                   mb: 4,
                   borderRadius: 3,
-                  border: '2px solid',
+                  bgcolor: 'white',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                  borderLeft: '4px solid',
                   borderColor: 'primary.main',
-                  bgcolor: 'primary.light',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
+                  },
                 }}
               >
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
                   <Box
                     sx={{
                       display: 'flex',
                       p: 1.5,
                       borderRadius: 2,
-                      bgcolor: 'primary.main',
-                      color: 'white',
-                      mr: 2,
+                      bgcolor: '#f1f5f9',
+                      color: 'primary.main',
                     }}
                   >
                     <GraduationCap size={28} />
                   </Box>
-                  <Box>
-                    <Typography variant="h5" sx={{ fontWeight: 700, color: 'text.primary' }}>
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="h5" sx={{ fontWeight: 700, color: '#1e293b', mb: 0.5 }}>
                       {COMPANY_INFO.owner.specialization}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary', fontWeight: 500 }}>
-                      triOS College - 2008
+                    <Typography variant="body1" sx={{ color: '#64748b', fontWeight: 500 }}>
+                      triOS College · 2008
                     </Typography>
                   </Box>
                 </Box>
@@ -768,13 +782,29 @@ export default function AboutPage() {
                 sx={{
                   p: 4,
                   borderRadius: 3,
-                  border: '1px solid',
-                  borderColor: 'grey.200',
+                  bgcolor: 'white',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
+                  },
                 }}
               >
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-                  <Award size={24} color="#1e3a8a" />
-                  <Typography variant="h5" sx={{ fontWeight: 700, ml: 1.5 }}>
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      p: 1.5,
+                      borderRadius: 2,
+                      bgcolor: '#f1f5f9',
+                      color: 'primary.main',
+                      mr: 1.5,
+                    }}
+                  >
+                    <Award size={24} />
+                  </Box>
+                  <Typography variant="h5" sx={{ fontWeight: 700, color: '#1e293b' }}>
                     Professional Certifications
                   </Typography>
                 </Box>
@@ -789,15 +819,14 @@ export default function AboutPage() {
                     <Box
                       key={index}
                       sx={{
-                        p: 2,
-                        borderRadius: 2,
-                        bgcolor: '#f8fafc',
-                        border: '1px solid',
-                        borderColor: 'grey.200',
+                        p: 2.5,
+                        borderRadius: 3,
+                        bgcolor: 'white',
+                        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
                         transition: 'all 0.3s ease',
                         '&:hover': {
-                          borderColor: 'primary.main',
-                          bgcolor: 'primary.light',
+                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
+                          transform: 'translateY(-2px)',
                         },
                       }}
                     >
@@ -805,10 +834,30 @@ export default function AboutPage() {
                         variant="body2"
                         sx={{
                           fontWeight: 600,
-                          color: 'text.primary',
+                          color: '#334155',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: 1,
                         }}
                       >
-                        ✓ {cert}
+                        <Box
+                          component="span"
+                          sx={{
+                            display: 'inline-flex',
+                            width: 18,
+                            height: 18,
+                            borderRadius: '50%',
+                            bgcolor: '#dcfce7',
+                            color: '#16a34a',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '0.75rem',
+                            fontWeight: 700,
+                          }}
+                        >
+                          ✓
+                        </Box>
+                        {cert}
                       </Typography>
                     </Box>
                   ))}
@@ -871,16 +920,16 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Paper
+                  elevation={0}
                   sx={{
                     p: 3,
-                    borderRadius: 2,
-                    border: '1px solid',
-                    borderColor: 'grey.200',
+                    borderRadius: 3,
+                    bgcolor: 'white',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
-                      borderColor: 'primary.main',
-                      transform: 'translateX(8px)',
-                      boxShadow: '0 4px 16px rgba(30, 58, 138, 0.1)',
+                      transform: 'translateY(-4px)',
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.12)',
                     },
                   }}
                 >
@@ -888,7 +937,7 @@ export default function AboutPage() {
                     variant="body1"
                     sx={{
                       fontWeight: 600,
-                      color: 'text.primary',
+                      color: '#334155',
                       display: 'flex',
                       alignItems: 'center',
                     }}
@@ -897,8 +946,8 @@ export default function AboutPage() {
                       component="span"
                       sx={{
                         display: 'inline-block',
-                        width: 8,
-                        height: 8,
+                        width: 6,
+                        height: 6,
                         borderRadius: '50%',
                         bgcolor: 'primary.main',
                         mr: 2,
