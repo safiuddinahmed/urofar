@@ -121,8 +121,11 @@ export default function TestimonialsGallery() {
                   left: 0,
                   right: 0,
                   background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, transparent 100%)',
+                  minHeight: '80px',
+                  display: 'flex',
+                  alignItems: 'center',
                   p: 2,
-                  opacity: 0,
+                  opacity: 1,
                   transition: 'opacity 0.3s ease',
                 }}
               >
