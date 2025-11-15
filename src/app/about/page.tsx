@@ -264,6 +264,8 @@ export default function AboutPage() {
                       flexDirection: 'column',
                       borderRadius: 3,
                       bgcolor: 'white',
+                      border: '2px solid',
+                      borderColor: 'primary.main',
                       boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                       transition: 'all 0.3s ease',
                       '&:hover': {
@@ -561,6 +563,8 @@ export default function AboutPage() {
                     textAlign: 'center',
                     borderRadius: 3,
                     bgcolor: 'white',
+                    border: '1px solid',
+                    borderColor: 'primary.main',
                     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
@@ -828,6 +832,8 @@ export default function AboutPage() {
                         minHeight: 100,
                         display: 'flex',
                         alignItems: 'center',
+                        border: '1px solid',
+                        borderColor: 'primary.main',
                         boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
                         transition: 'all 0.3s ease',
                         '&:hover': {
@@ -932,6 +938,8 @@ export default function AboutPage() {
                     minHeight: 80,
                     borderRadius: 3,
                     bgcolor: 'white',
+                    border: '1px solid',
+                    borderColor: 'primary.main',
                     boxShadow: '0 2px 8px rgba(0, 0, 0, 0.08)',
                     transition: 'all 0.3s ease',
                     display: 'flex',
