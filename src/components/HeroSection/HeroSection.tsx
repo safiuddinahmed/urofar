@@ -269,7 +269,7 @@ export default function HeroSection() {
                         bgcolor: 'rgba(255, 255, 255, 0.1)',
                         border: '1px solid rgba(255, 255, 255, 0.2)',
                         borderRadius: { xs: 1.5, sm: 2 },
-                        p: { xs: 1.5, sm: 2, md: 2.5 },
+                        p: { xs: 1, sm: 2, md: 2.5 },
                         textAlign: 'center',
                         boxShadow: '0 8px 32px rgba(0, 0, 0, 0.1)',
                         transition: 'all 0.3s ease',
@@ -279,14 +279,17 @@ export default function HeroSection() {
                         },
                       }}
                     >
-                      <Icon size={24} color="white" style={{ marginBottom: 6 }} />
+                      <Icon size={20} color="white" style={{ marginBottom: 4 }} />
                       <Typography
                         variant="h3"
                         sx={{
                           color: 'white',
                           fontWeight: 700,
-                          fontSize: { xs: '1.25rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' },
+                          fontSize: { xs: '1.1rem', sm: '1.5rem', md: '1.75rem', lg: '2rem' },
                           mb: 0.25,
+                          minWidth: { xs: '48px', sm: '65px', md: '70px' },
+                          textAlign: 'center',
+                          fontVariantNumeric: 'tabular-nums',
                         }}
                       >
                         <AnimatedCounter end={stat.value} suffix={stat.suffix} />
