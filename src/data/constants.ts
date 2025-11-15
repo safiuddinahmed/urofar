@@ -79,11 +79,11 @@ export const SERVICES = [
     category: 'Core Services',
   },
   {
-    id: 'system-optimization',
-    title: 'System Optimization',
-    description: 'Improve your computer\'s performance with our comprehensive system optimization services, including cleanup, tuning, and configuration.',
-    icon: 'Gauge',
-    category: 'Core Services',
+    id: 'remote-support',
+    title: 'Remote Support and Walk-in',
+    description: 'Flexible support options including remote assistance for quick fixes and walk-in service at our location.',
+    icon: 'MonitorSmartphone',
+    category: 'Business Solutions',
   },
   {
     id: 'laptops-desktops',
@@ -121,11 +121,11 @@ export const SERVICES = [
     category: 'Hardware & Software',
   },
   {
-    id: 'remote-support',
-    title: 'Remote Support and Walk-in',
-    description: 'Flexible support options including remote assistance for quick fixes and walk-in service at our location.',
-    icon: 'MonitorSmartphone',
-    category: 'Business Solutions',
+    id: 'system-optimization',
+    title: 'System Optimization',
+    description: 'Improve your computer\'s performance with our comprehensive system optimization services, including cleanup, tuning, and configuration.',
+    icon: 'Gauge',
+    category: 'Core Services',
   },
   {
     id: 'networking',

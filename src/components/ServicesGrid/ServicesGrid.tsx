@@ -9,6 +9,7 @@ import {
   Laptop, 
   Download, 
   Database,
+  MonitorSmartphone,
   ArrowRight,
   LucideIcon
 } from 'lucide-react';
@@ -23,13 +24,14 @@ const iconMap: Record<string, LucideIcon> = {
   Laptop,
   Download,
   Database,
+  MonitorSmartphone,
 };
 
 // Map service IDs to image filenames
 const imageMap: Record<string, string> = {
   'computer-consultancy': 'consultancy.jpg',
   'data-recovery': 'data-recovery.jpg',
-  'system-optimization': 'optimization.jpg',
+  'remote-support': 'remote-support.jpg',
   'laptops-desktops': 'hardware.jpg',
   'installations-upgrades': 'optimization.jpg',
   'backups-restores': 'security.jpg',
