@@ -328,19 +328,10 @@ export default function HeroSection() {
                 mx: { xs: -2, sm: -3, md: 0 },
                 px: { xs: 2, sm: 3, md: 0 },
                 '&::-webkit-scrollbar': {
-                  height: '4px',
+                  display: 'none',
                 },
-                '&::-webkit-scrollbar-track': {
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  borderRadius: '2px',
-                },
-                '&::-webkit-scrollbar-thumb': {
-                  background: 'rgba(255, 255, 255, 0.3)',
-                  borderRadius: '2px',
-                  '&:hover': {
-                    background: 'rgba(255, 255, 255, 0.4)',
-                  },
-                },
+                scrollbarWidth: 'none',
+                msOverflowStyle: 'none',
               }}
             >
               {COMPANY_INFO.features.map((feature, index) => (
