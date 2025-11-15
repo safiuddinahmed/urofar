@@ -142,8 +142,8 @@ export default function Footer() {
               <Image
                 src="/images/snowpeak-logo-white.svg"
                 alt="SnowPeak"
-                width={160}
-                height={40}
+                width={140}
+                height={35}
                 style={{ objectFit: 'contain', marginLeft: '-12px' }}
               />
             </a>
