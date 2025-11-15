@@ -199,15 +199,15 @@ export default function ServicesPage() {
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  500+
+                  2,000+
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  Happy Clients
+                  Clients Served
                 </Typography>
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  15+
+                  17+
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Years Experience

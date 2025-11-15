@@ -243,9 +243,9 @@ export default function HeroSection() {
               }}
             >
               {[
-                { icon: Calendar, value: 15, suffix: '+', label: 'Years Experience' },
-                { icon: Award, value: 6, suffix: '+', label: 'Certifications' },
-                { icon: Users, value: 500, suffix: '+', label: 'Happy Clients' },
+                { icon: Calendar, value: 17, suffix: '+', label: 'Years Experience' },
+                { icon: Award, value: 7, suffix: '+', label: 'Certifications' },
+                { icon: Users, value: 2000, suffix: '+', label: 'Clients Served' },
                 { icon: CheckCircle, value: 15, suffix: '+', label: 'Services' },
               ].map((stat, index) => {
                 const Icon = stat.icon;

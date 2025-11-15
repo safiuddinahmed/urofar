@@ -47,6 +47,7 @@ export const COMPANY_INFO = {
     ],
   },
   certifications: [
+    'Microsoft Certified Professional (MCP)',
     'Microsoft Certified Systems Engineer (MCSE)',
     'Microsoft Certified Desktop Support Technician (MCDST)',
     'Microsoft Certified IT Professional (MCITP)',
@@ -273,7 +274,7 @@ export const STATS = [
   },
   {
     label: 'Certifications',
-    value: '6+',
+    value: '7+',
     icon: 'Award',
   },
   {

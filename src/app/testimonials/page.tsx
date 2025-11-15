@@ -143,7 +143,7 @@ export default function TestimonialsPage() {
               </Box>
               <Box>
                 <Typography variant="h4" sx={{ fontWeight: 700, mb: 0.5 }}>
-                  15+
+                  17+
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Years of Excellence
