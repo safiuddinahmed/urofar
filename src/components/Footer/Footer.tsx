@@ -117,24 +117,37 @@ export default function Footer() {
           <Typography variant="body2" sx={{ color: 'grey.500', textAlign: { xs: 'center', sm: 'left' } }}>
             © {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
           </Typography>
-          <Typography variant="body2" sx={{ color: 'grey.500', textAlign: { xs: 'center', sm: 'right' } }}>
-            Powered by{' '}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, justifyContent: { xs: 'center', sm: 'flex-end' } }}>
+            <Typography variant="body2" sx={{ color: 'grey.500' }}>
+              Powered by
+            </Typography>
             <a
               href="https://www.snow-peak.ca/"
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: '#0891b2',
-                textDecoration: 'none',
-                fontWeight: 500,
-                transition: 'color 0.2s ease',
+                display: 'inline-flex',
+                alignItems: 'center',
+                transition: 'opacity 0.2s ease, transform 0.2s ease',
               }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#06b6d4')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#0891b2')}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = '0.8';
+                e.currentTarget.style.transform = 'translateY(-1px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = '1';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
             >
-              SnowPeak
+              <Image
+                src="/images/snowpeak-logo-white.svg"
+                alt="SnowPeak"
+                width={140}
+                height={35}
+                style={{ objectFit: 'contain' }}
+              />
             </a>
-          </Typography>
+          </Box>
         </Box>
       </Container>
     </Box>
