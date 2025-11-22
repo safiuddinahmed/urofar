@@ -23,8 +23,8 @@ export const COMPANY_INFO = {
   },
   owner: {
     name: 'Waheed Sarguroh',
-    title: 'Owner & Senior IT Consultant',
-    subtitle: 'Desktop Support Specialist',
+    title: 'Owner & Computer Engineer',
+    subtitle: 'Data Recovery, Software & Hardware Specialist',
     specialization: 'Network Specialist - MCSE (Microsoft Certified Systems Engineer)',
     experience: '17+ years of IT experience',
     corporateExperience: '9+ years in corporate desktop support and field engineering',
