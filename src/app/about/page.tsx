@@ -387,12 +387,13 @@ export default function AboutPage() {
                   sx={{
                     flexShrink: 0,
                     position: 'relative',
-                    width: { xs: 220, md: 260 },
-                    height: { xs: 280, md: 340 },
+                    width: { xs: 240, md: 280 },
+                    height: { xs: 340, md: 420 },
                     borderRadius: 3,
                     overflow: 'hidden',
                     border: '5px solid',
                     borderColor: 'primary.main',
+                    bgcolor: '#f8fafc',
                     boxShadow: '0 12px 32px rgba(30, 58, 138, 0.25)',
                     transition: 'all 0.3s ease',
                     '&:hover': {
@@ -405,8 +406,8 @@ export default function AboutPage() {
                     src="/thumbnail_Waheed-2.jpg"
                     alt={COMPANY_INFO.owner.name}
                     fill
-                    style={{ objectFit: 'cover' }}
-                    sizes="(max-width: 768px) 220px, 260px"
+                    style={{ objectFit: 'cover', objectPosition: 'center top' }}
+                    sizes="(max-width: 768px) 240px, 280px"
                     priority
                   />
                 </Box>
