@@ -2,7 +2,7 @@
 
 import { Box, Container, Typography, Paper, Chip } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Award, Users, Target, Heart, Briefcase, GraduationCap } from 'lucide-react';
+import { Award, Users, Target, Heart, Briefcase, GraduationCap, Building2, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import { COMPANY_INFO } from '@/data/constants';
 import CallToAction from '@/components/CallToAction/CallToAction';
@@ -842,64 +842,174 @@ export default function AboutPage() {
                     Professional Certifications
                   </Typography>
                 </Box>
-                <Box
-                  sx={{
-                    display: 'grid',
-                    gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
-                    gap: 2,
-                  }}
-                >
-                  {COMPANY_INFO.certifications.map((cert, index) => (
+                {/* Microsoft Certifications */}
+                <Box sx={{ mb: 4 }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
                     <Box
-                      key={index}
                       sx={{
-                        p: 2.5,
-                        borderRadius: 3,
-                        bgcolor: 'white',
-                        minHeight: 100,
                         display: 'flex',
-                        alignItems: 'center',
-                        border: '1px solid',
-                        borderColor: 'primary.main',
-                        boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
-                          transform: 'translateY(-2px)',
-                        },
+                        p: 0.75,
+                        borderRadius: 1.5,
+                        bgcolor: 'primary.main',
+                        color: 'white',
                       }}
                     >
-                      <Typography
-                        variant="body2"
+                      <Building2 size={20} />
+                    </Box>
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: 700,
+                        color: 'text.primary',
+                      }}
+                    >
+                      {COMPANY_INFO.certificationCategories.microsoft.title}
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
+                      gap: 2,
+                    }}
+                  >
+                    {COMPANY_INFO.certificationCategories.microsoft.certifications.map((cert, index) => (
+                      <Box
+                        key={index}
                         sx={{
-                          fontWeight: 600,
-                          color: '#334155',
+                          p: 2.5,
+                          borderRadius: 3,
+                          bgcolor: 'white',
+                          minHeight: 100,
                           display: 'flex',
                           alignItems: 'center',
-                          gap: 1,
+                          border: '1px solid',
+                          borderColor: 'primary.main',
+                          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
+                          transition: 'all 0.3s ease',
+                          '&:hover': {
+                            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
+                            transform: 'translateY(-2px)',
+                          },
                         }}
                       >
-                        <Box
-                          component="span"
+                        <Typography
+                          variant="body2"
                           sx={{
-                            display: 'inline-flex',
-                            width: 18,
-                            height: 18,
-                            borderRadius: '50%',
-                            bgcolor: '#dcfce7',
-                            color: '#16a34a',
+                            fontWeight: 600,
+                            color: '#334155',
+                            display: 'flex',
                             alignItems: 'center',
-                            justifyContent: 'center',
-                            fontSize: '0.75rem',
-                            fontWeight: 700,
+                            gap: 1,
                           }}
                         >
-                          ✓
-                        </Box>
-                        {cert}
-                      </Typography>
+                          <Box
+                            component="span"
+                            sx={{
+                              display: 'inline-flex',
+                              width: 18,
+                              height: 18,
+                              borderRadius: '50%',
+                              bgcolor: '#dcfce7',
+                              color: '#16a34a',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '0.75rem',
+                              fontWeight: 700,
+                            }}
+                          >
+                            ✓
+                          </Box>
+                          {cert}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
+                </Box>
+
+                {/* CompTIA Certifications */}
+                <Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+                    <Box
+                      sx={{
+                        display: 'flex',
+                        p: 0.75,
+                        borderRadius: 1.5,
+                        bgcolor: 'primary.main',
+                        color: 'white',
+                      }}
+                    >
+                      <ShieldCheck size={20} />
                     </Box>
-                  ))}
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: 700,
+                        color: 'text.primary',
+                      }}
+                    >
+                      {COMPANY_INFO.certificationCategories.comptia.title}
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: 'grid',
+                      gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' },
+                      gap: 2,
+                    }}
+                  >
+                    {COMPANY_INFO.certificationCategories.comptia.certifications.map((cert, index) => (
+                      <Box
+                        key={index}
+                        sx={{
+                          p: 2.5,
+                          borderRadius: 3,
+                          bgcolor: 'white',
+                          minHeight: 100,
+                          display: 'flex',
+                          alignItems: 'center',
+                          border: '1px solid',
+                          borderColor: 'primary.main',
+                          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.08)',
+                          transition: 'all 0.3s ease',
+                          '&:hover': {
+                            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.12)',
+                            transform: 'translateY(-2px)',
+                          },
+                        }}
+                      >
+                        <Typography
+                          variant="body2"
+                          sx={{
+                            fontWeight: 600,
+                            color: '#334155',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 1,
+                          }}
+                        >
+                          <Box
+                            component="span"
+                            sx={{
+                              display: 'inline-flex',
+                              width: 18,
+                              height: 18,
+                              borderRadius: '50%',
+                              bgcolor: '#dcfce7',
+                              color: '#16a34a',
+                              alignItems: 'center',
+                              justifyContent: 'center',
+                              fontSize: '0.75rem',
+                              fontWeight: 700,
+                            }}
+                          >
+                            ✓
+                          </Box>
+                          {cert}
+                        </Typography>
+                      </Box>
+                    ))}
+                  </Box>
                 </Box>
               </Paper>
             </motion.div>

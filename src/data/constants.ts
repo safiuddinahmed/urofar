@@ -47,14 +47,35 @@ export const COMPANY_INFO = {
     ],
   },
   certifications: [
-    'Microsoft Certified Professional (MCP)',
     'Microsoft Certified Systems Engineer (MCSE)',
-    'Microsoft Certified Desktop Support Technician (MCDST)',
+    'Microsoft Certified Professional (MCP)',
     'Microsoft Certified IT Professional (MCITP)',
-    'CompTIA A+',
+    'Microsoft Certified Desktop Support Technician (MCDST)',
     'CompTIA Network+',
+    'CompTIA A+',
     'CompTIA Security+',
-  ],
+ ],
+  certificationCategories: {
+    microsoft: {
+      title: 'Microsoft Certifications',
+      icon: 'Building2',
+      certifications: [
+        'Microsoft Certified Systems Engineer (MCSE)',
+        'Microsoft Certified Professional (MCP)',
+        'Microsoft Certified IT Professional (MCITP)',
+        'Microsoft Certified Desktop Support Technician (MCDST)',
+      ],
+    },
+    comptia: {
+      title: 'CompTIA Certifications',
+      icon: 'ShieldCheck',
+      certifications: [
+        'CompTIA Network+',
+        'CompTIA A+',
+        'CompTIA Security+',
+      ],
+    },
+  },
   features: [
     'Free Parking Available',
     'Remote Support Available',

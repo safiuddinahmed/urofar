@@ -19,6 +19,8 @@ import {
   Printer,
   Home,
   ChevronRight,
+  Building2,
+  ShieldCheck,
   LucideIcon
 } from 'lucide-react';
 import Link from 'next/link';
@@ -458,59 +460,162 @@ export default function ServicesPage() {
               </Typography>
             </Box>
 
-            {/* Certifications Grid */}
-            <Box
-              sx={{
-                display: 'grid',
-                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
-                gap: 3,
-              }}
-            >
-              {COMPANY_INFO.certifications.map((cert, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+            {/* Microsoft Certifications */}
+            <Box sx={{ mb: 6 }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    p: 1,
+                    borderRadius: 2,
+                    bgcolor: 'primary.main',
+                    color: 'white',
+                  }}
                 >
-                  <Box
-                    sx={{
-                      p: 3,
-                      borderRadius: 2,
-                      bgcolor: '#f8fafc',
-                      border: '2px solid',
-                      borderColor: 'primary.main',
-                      textAlign: 'center',
-                      minHeight: 110,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      transition: 'all 0.3s ease',
-                      '&:hover': {
-                        transform: 'translateY(-4px)',
-                        boxShadow: '0 8px 24px rgba(30, 58, 138, 0.15)',
-                        bgcolor: 'primary.main',
-                        '& .cert-text': {
-                          color: 'white',
-                        },
-                      },
-                    }}
+                  <Building2 size={24} />
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 700,
+                    color: 'text.primary',
+                  }}
+                >
+                  {COMPANY_INFO.certificationCategories.microsoft.title}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+                  gap: 3,
+                }}
+              >
+                {COMPANY_INFO.certificationCategories.microsoft.certifications.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    <Typography
-                      className="cert-text"
-                      variant="body1"
+                    <Box
                       sx={{
-                        fontWeight: 600,
-                        color: 'text.primary',
-                        transition: 'color 0.3s ease',
+                        p: 3,
+                        borderRadius: 2,
+                        bgcolor: '#f8fafc',
+                        border: '2px solid',
+                        borderColor: 'primary.main',
+                        textAlign: 'center',
+                        minHeight: 110,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 24px rgba(30, 58, 138, 0.15)',
+                          bgcolor: 'primary.main',
+                          '& .cert-text': {
+                            color: 'white',
+                          },
+                        },
                       }}
                     >
-                      {cert}
-                    </Typography>
-                  </Box>
-                </motion.div>
-              ))}
+                      <Typography
+                        className="cert-text"
+                        variant="body1"
+                        sx={{
+                          fontWeight: 600,
+                          color: 'text.primary',
+                          transition: 'color 0.3s ease',
+                        }}
+                      >
+                        {cert}
+                      </Typography>
+                    </Box>
+                  </motion.div>
+                ))}
+              </Box>
+            </Box>
+
+            {/* CompTIA Certifications */}
+            <Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 3 }}>
+                <Box
+                  sx={{
+                    display: 'flex',
+                    p: 1,
+                    borderRadius: 2,
+                    bgcolor: 'primary.main',
+                    color: 'white',
+                  }}
+                >
+                  <ShieldCheck size={24} />
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontWeight: 700,
+                    color: 'text.primary',
+                  }}
+                >
+                  {COMPANY_INFO.certificationCategories.comptia.title}
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: 'grid',
+                  gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+                  gap: 3,
+                }}
+              >
+                {COMPANY_INFO.certificationCategories.comptia.certifications.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                  >
+                    <Box
+                      sx={{
+                        p: 3,
+                        borderRadius: 2,
+                        bgcolor: '#f8fafc',
+                        border: '2px solid',
+                        borderColor: 'primary.main',
+                        textAlign: 'center',
+                        minHeight: 110,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          transform: 'translateY(-4px)',
+                          boxShadow: '0 8px 24px rgba(30, 58, 138, 0.15)',
+                          bgcolor: 'primary.main',
+                          '& .cert-text': {
+                            color: 'white',
+                          },
+                        },
+                      }}
+                    >
+                      <Typography
+                        className="cert-text"
+                        variant="body1"
+                        sx={{
+                          fontWeight: 600,
+                          color: 'text.primary',
+                          transition: 'color 0.3s ease',
+                        }}
+                      >
+                        {cert}
+                      </Typography>
+                    </Box>
+                  </motion.div>
+                ))}
+              </Box>
             </Box>
 
             {/* Features */}
