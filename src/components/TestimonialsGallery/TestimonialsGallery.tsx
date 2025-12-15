@@ -31,11 +31,10 @@ const testimonials: Testimonial[] = [
   { id: 16, filename: '16 Completion of Ontario Self-Employment Benefit Program Completion_page-0001.jpg', title: 'Completion of Ontario Self-Employment Benefit Program' },
   { id: 17, filename: '17 Letter from Job Skills_page-0001.jpg', title: 'Letter from Job Skills' },
   { id: 18, filename: '18 MCSE Diploma from triOS College_page-0001.jpg', title: 'MCSE Diploma from triOS College' },
-  { id: 19, filename: '19 MCSE Diploma from triOS College_page-0001.jpg', title: 'MCSE Diploma from triOS College' },
-  { id: 20, filename: '20 Official Transcript of Grades - MCSE_page-0001.jpg', title: 'Official Transcript of Grades - MCSE' },
-  { id: 21, filename: '21 Letter from triOS College_page-0001.jpg', title: 'Letter from triOS College' },
-  { id: 22, filename: '22 Certificate of Completion - Dimensions of Data Privacy_page-0001.jpg', title: 'Certificate of Completion - Dimensions of Data Privacy' },
-  { id: 23, filename: '23 Certificate of Information Security_page-0001.jpg', title: 'Certificate of Information Security' },
+  { id: 19, filename: '20 Official Transcript of Grades - MCSE_page-0001.jpg', title: 'Official Transcript of Grades - MCSE' },
+  { id: 20, filename: '21 Letter from triOS College_page-0001.jpg', title: 'Letter from triOS College' },
+  { id: 21, filename: '22 Certificate of Completion - Dimensions of Data Privacy_page-0001.jpg', title: 'Certificate of Completion - Dimensions of Data Privacy' },
+  { id: 22, filename: '23 Certificate of Information Security_page-0001.jpg', title: 'Certificate of Information Security' },
 ];
 
 export default function TestimonialsGallery() {
